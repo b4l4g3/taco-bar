@@ -49,7 +49,7 @@ const LowerTitle = styled.h3`
   margin: 0;
 `
 
-const Button = styled.button`
+const Button = styled.a`
   grid-area: Button;
   margin: 0.5em;
   height: 2.7em;
@@ -59,6 +59,8 @@ const Button = styled.button`
   background-color: #fff;
   font: normal 600 1.2em sans-serif;
   color: #480400;
+  text-align: center;
+  padding: 0.7em;
 
   &:hover {
     background-color: #ffffffba;
