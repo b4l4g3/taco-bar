@@ -75,7 +75,7 @@ class Home extends Component {
         <MainTitle>Dante's Taco Bar</MainTitle>
         <MiddleTitle>the best tacos in Bradford</MiddleTitle>
         <LowerTitle>Enjoy the most delicious flavors of Mexico!</LowerTitle>
-        <Button>Order</Button>
+        <Button href={'https://www.ubereats.com/en-GB/london/food-delivery/dante-taco-bar/'}>Order</Button>
         <Nav />
       </Wrapper>
     )
