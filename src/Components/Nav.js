@@ -36,7 +36,7 @@ class Nav extends Component {
             <Wrapper>
                 <NavItem href={'https://www.google.com'}><Logo src={'./Images/specialities.svg'} alt={'specialities'} />
                 <NavText>Speciality</NavText></NavItem>
-                <NavItem href={'https://www.google.com'}><Logo src={'./Images/menu.svg'} alt={'menu'} />
+                <NavItem href={'#Menu'}><Logo src={'./Images/menu.svg'} alt={'menu'} />
                 <NavText>Menu</NavText></NavItem>
                 <NavItem href={'https://www.google.com'}><Logo src={'./Images/career.svg'} alt={'career'} />
                 <NavText>Career</NavText></NavItem>

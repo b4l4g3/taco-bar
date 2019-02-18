@@ -14,15 +14,18 @@ const Block = styled.div`
   width: 85%;
   background-color: #131313;
   color: white;
+  padding: 2em;
 `
 
 const Title = styled.p`
-
+  text-align: center;
 `
 
 const Item = styled.p`
   display: flex;
   flex-direction: row;
+  width: auto;
+  justify-content: space-between;
 `
 
 const ItemName = styled.p`
@@ -35,7 +38,7 @@ const Price = styled.p`
 
 class Menu extends Component {
   render() {
-    const menuData = new Map(Object.entries({ "tacos": [{ "name": "Beef Taco", "price": "7.5£" }, { "name": "Chicken Taco", "price": "7£" }, { "name": "Tuna Taco", "price": "8.5£" }], "sides": [{ "name": "Salsa Roja", "price": "3£" }, { "name": "Rice & Beans", "price": "4£" }, { "name": "Tortilla Chips", "pirce": "3.5£" }], "desserts": [{ "name": "Churro", "price": "4.5£" }, { "name": "Sopaipilla", "price": "4£" }, { "name": "Pastelitos De Boda", "price": "5£" }], "drinks": [{ "name": "Mexican Coke 12oz", "price": "3£" }, { "name": "Tequila 1.5oz", "price": "4£" }, { "name": "Corona 12oz", "price": "3.5£" }] }));
+    const menuData = new Map(Object.entries({ "tacos": [{ "name": "Beef Taco", "price": "7.5£" }, { "name": "Chicken Taco", "price": "7£" }, { "name": "Tuna Taco", "price": "8.5£" }], "sides": [{ "name": "Salsa Roja", "price": "3£" }, { "name": "Rice & Beans", "price": "4£" }, { "name": "Tortilla Chips", "price": "3.5£" }], "desserts": [{ "name": "Churro", "price": "4.5£" }, { "name": "Sopaipilla", "price": "4£" }, { "name": "Pastelitos De Boda", "price": "5£" }], "drinks": [{ "name": "Mexican Coke 12oz", "price": "3£" }, { "name": "Tequila 1.5oz", "price": "4£" }, { "name": "Corona 12oz", "price": "3.5£" }] }));
     const menu = [];
     menuData.forEach((key, value) => {
 

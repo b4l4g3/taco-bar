@@ -19,8 +19,8 @@ class App extends Component {
     return (
       <Wrapper>
        <GlobalStyle />
-       <Home />
-       <Menu />
+       <Home id="Home" />
+       <Menu id="Menu" />
        <Speciality />
       </Wrapper>
     );
