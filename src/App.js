@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Home from './Components/Home';
-import Tacos from './Components/Tacos';
+import Speciality from './Components/Speciality';
+import Menu from './Components/Menu';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Oleo+Script');
@@ -19,7 +20,8 @@ class App extends Component {
       <Wrapper>
        <GlobalStyle />
        <Home />
-       <Tacos />
+       <Menu />
+       <Speciality />
       </Wrapper>
     );
   }

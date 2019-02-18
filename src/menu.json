@@ -1,0 +1,58 @@
+{
+   "tacos": [
+      {
+         "name": "Beef Taco",
+         "price": "7.5£"
+      },
+      {
+         "name": "Chicken Taco",
+         "price": "7£"
+      },
+      {
+         "name": "Tuna Taco",
+         "price": "8.5£"
+      }
+   ],
+   "sides": [
+      {
+         "name": "Salsa Roja",
+         "price": "3£"
+      },
+      {
+         "name": "Rice & Beans",
+         "price": "4£"
+      },
+      {
+         "name": "Tortilla Chips",
+         "pirce": "3.5£"
+      }
+   ],
+   "desserts": [
+      {
+         "name": "Churro",
+         "price": "4.5£"
+      },
+      {
+         "name": "Sopaipilla",
+         "price": "4£"
+      },
+      {
+         "name": "Pastelitos De Boda",
+         "price": "5£"
+      }
+   ],
+   "drinks": [
+      {
+         "name": "Mxican Coke 12oz",
+         "price": "3£"
+      },
+      {
+         "name": "Tequila 1.5oz",
+         "price": "4£"
+      },
+      {
+         "name": "Corona 12oz",
+         "price": "3.5£"
+      }
+   ]
+}
