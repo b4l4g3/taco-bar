@@ -5,7 +5,6 @@ const Wrapper = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
 `
 
 const Block = styled.div`
@@ -15,10 +14,12 @@ const Block = styled.div`
   background-color: #131313;
   color: white;
   padding: 2em;
+  margin: 2em auto;
 `
 
 const Title = styled.p`
   text-align: center;
+  margin: 0;
 `
 
 const Item = styled.p`

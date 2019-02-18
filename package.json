@@ -4,9 +4,11 @@
   "private": true,
   "homepage": "https://b4l4g3.github.io/taco-bar/",
   "dependencies": {
+    "npm": "^6.8.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
+    "react-router-hash-link": "^1.2.1",
     "react-scripts": "2.1.3",
     "styled-components": "^4.1.3"
   },
