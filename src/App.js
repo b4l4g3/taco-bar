@@ -15,12 +15,17 @@ const Wrapper = styled.div`
 `
 
 class App extends Component {
+  menuComp = React.createRef();
+
+  componentDidMount() {
+  }
+
   render() {
     return (
       <Wrapper>
        <GlobalStyle />
-       <Home id="Home" />
-       <Menu id="Menu" />
+       <Home getRef={this.menuComp} />
+       <Menu ref={this.menuComp} />
        <Speciality />
       </Wrapper>
     );

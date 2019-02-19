@@ -70,6 +70,8 @@ const Button = styled.a`
 
 class Home extends Component {
   render() {
+    const getRef = this.props.getRef;
+    console.dir(getRef)
     return (
       <Wrapper>
         <Logo src={'./Images/dante.svg'} />
@@ -77,7 +79,7 @@ class Home extends Component {
         <MiddleTitle>the best tacos in Bradford</MiddleTitle>
         <LowerTitle>Enjoy the most delicious flavors of Mexico!</LowerTitle>
         <Button target={'_blank'} href={'https://www.ubereats.com/en-GB/london/food-delivery/dante-taco-bar/'}>Order</Button>
-        <Nav />
+        <Nav getRef={getRef} />
       </Wrapper>
     )
   }

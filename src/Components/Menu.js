@@ -22,7 +22,7 @@ const Title = styled.p`
   margin: 0;
 `
 
-const Item = styled.p`
+const Item = styled.div`
   display: flex;
   flex-direction: row;
   width: auto;
@@ -44,26 +44,25 @@ class Menu extends Component {
     menuData.forEach((key, value) => {
 
       const items = []
-      key.forEach(item => {
-        const comp = <Item>
+      key.forEach((item) => {
+        const comp = <Item key={item.name}>
           <ItemName>{item.name}</ItemName>
           <Price>{item.price}</Price>
         </Item>
         items.push(comp);
       })
-
-      const comp = <Block>
+      const comp = <Block key={value}>
         <Title>{value}</Title>
         {items}
       </Block>
       menu.push(comp);
     })
     return (
-      <Wrapper>
+      <Wrapper ref={this.props.innerRef}>
         {menu}
       </Wrapper>
     )
   }
 }
 
-export default Menu
+export default React.forwardRef((props, ref) => <Menu innerRef={ref} {...props}/>); 
