@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/taco-bar/static/js/runtime~main.cf76bf07.js"
   },
   {
-    "revision": "83a54c05b8887ea0db45",
-    "url": "/taco-bar/static/js/main.83a54c05.chunk.js"
+    "revision": "3d3e84c15afd755374ee",
+    "url": "/taco-bar/static/js/main.3d3e84c1.chunk.js"
   },
   {
     "revision": "f4c661959d059615abc1",
     "url": "/taco-bar/static/js/1.f4c66195.chunk.js"
   },
   {
-    "revision": "2cea42f0457b0c951f6d4cfda3c6004f",
+    "revision": "03b661c63c11e179629c09edf4054441",
     "url": "/taco-bar/index.html"
   }
 ];
