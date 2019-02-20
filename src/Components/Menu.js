@@ -1,28 +1,63 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import menuData from './menuData'
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  background-color: white;
+`
+
+const Title = styled.h1`
+  text-align: center;
+  margin: 10px;
+  color: #535252;
+  font: normal 600 2em Merriweather;
+`
+
+const Blocks = styled.div`
   display: grid;
+  justify-items: center;
   grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+
+  @media (max-width: 390px) {
+    grid-template-columns: none;
+  }
 `
 
 const Block = styled.div`
-  margin: 25px;
-  background-color: #fff;
   width: 85%;
   background-color: #131313;
-  color: white;
+  border-radius: 3px;
+  color: #f6f6f6;
   padding: 2em;
-  margin: 2em auto;
+  margin: 1em;
+
+  @media (max-width: 390px) {
+    margin: 0.5em;
+  }
 `
 
-const Title = styled.p`
+const Container = styled.div`
+  background-color: #434343c7;
+  border-radius: 4px;
+`
+
+const Type = styled.p`
   text-align: center;
   margin: 0;
+  padding: 0.3em;
+  font: normal 600 1.8em 'Oleo Script';
+
+  @media (max-width: 390px) {
+    padding: 0;
+  }
 `
 
 const Item = styled.div`
+  font: italic 600 1.15em Merriweather;
   display: flex;
   flex-direction: row;
   width: auto;
@@ -30,18 +65,22 @@ const Item = styled.div`
 `
 
 const ItemName = styled.p`
+  margin: 0;
+  padding 0.5em;
 
 `
 
 const Price = styled.p`
+  margin: 0;
+  padding 0.5em;
 
 `
 
 class Menu extends Component {
   render() {
-    const menuData = new Map(Object.entries({ "tacos": [{ "name": "Beef Taco", "price": "7.5£" }, { "name": "Chicken Taco", "price": "7£" }, { "name": "Tuna Taco", "price": "8.5£" }], "sides": [{ "name": "Salsa Roja", "price": "3£" }, { "name": "Rice & Beans", "price": "4£" }, { "name": "Tortilla Chips", "price": "3.5£" }], "desserts": [{ "name": "Churro", "price": "4.5£" }, { "name": "Sopaipilla", "price": "4£" }, { "name": "Pastelitos De Boda", "price": "5£" }], "drinks": [{ "name": "Mexican Coke 12oz", "price": "3£" }, { "name": "Tequila 1.5oz", "price": "4£" }, { "name": "Corona 12oz", "price": "3.5£" }] }));
+    const menuMap = new Map(Object.entries(menuData));
     const menu = [];
-    menuData.forEach((key, value) => {
+    menuMap.forEach((key, value) => {
 
       const items = []
       key.forEach((item) => {
@@ -51,15 +90,52 @@ class Menu extends Component {
         </Item>
         items.push(comp);
       })
-      const comp = <Block key={value}>
-        <Title>{value}</Title>
+      console.dir(value);
+      let bgImage;
+      switch (value) {
+        case 'tacos': 
+        bgImage = {
+          background: "#6DB3F2 url('./Images/tacos2.jpg')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        };
+        break;
+        case 'sides':
+        bgImage = {
+          background: "#6DB3F2 url('./Images/sides2.jpg')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        };
+        break;
+        case 'drinks':
+        bgImage = {
+          background: "#6DB3F2 url('./Images/drinks2.jpg')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        };
+        break;
+        case 'desserts':
+        bgImage = {
+          background: "#6DB3F2 url('./Images/desserts2.jpg')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        };
+        break;
+        default:
+        break;
+      }
+      const comp = <Block style={bgImage} key={value}>
+        <Container>
+        <Type>{value}</Type>
         {items}
+        </Container>
       </Block>
       menu.push(comp);
     })
     return (
       <Wrapper ref={this.props.innerRef}>
-        {menu}
+      <Title>Menu</Title>
+      <Blocks>{menu}</Blocks>      
       </Wrapper>
     )
   }

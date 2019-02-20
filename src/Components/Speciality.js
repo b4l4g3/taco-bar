@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  background-color: gray;
+  scroll-snap-align: center;
+  background-image: url('./Images/speciality.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;

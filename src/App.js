@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 16px;
+
+  @media (max-width: 390px) {
+    font-size: 10px;
+  }
 `
 
 class App extends Component {
@@ -28,11 +32,10 @@ class App extends Component {
   }
 
   render() {
-    console.dir(this.state)
     return (
       <Wrapper>
         <GlobalStyle />
-        <Home getRef={this.state} />
+        <Home  getRef={this.state} />
         <Menu ref={this.state.menuComp} />
         <Speciality ref={this.state.specComp} />
       </Wrapper>
