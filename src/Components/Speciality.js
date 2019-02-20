@@ -10,14 +10,14 @@ const Wrapper = styled.div`
   height: 100vh;
 `
 
-class Tacos extends Component {
+class Speciality extends Component {
   render() {
     return (
-      <Wrapper>
+      <Wrapper ref={this.props.innerRef}>
         <p>asd</p>
       </Wrapper>
     )
   }
 }
 
-export default Tacos
+export default React.forwardRef((props, ref) => <Speciality innerRef={ref} {...props}/>); 

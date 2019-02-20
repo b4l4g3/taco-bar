@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { scroll } from '../helper.js'
 
 const Wrapper = styled.div`
     display: flex;
@@ -35,13 +36,9 @@ class Nav extends Component {
         const getRef = this.props.getRef;
         return (
             <Wrapper>
-                <NavItem onClick={() => window.scrollTo({
-                    top: getRef.current.offsetTop,
-                    left: 0,
-                    behavior: 'smooth'
-                })}><Logo src={'./Images/specialities.svg'} alt={'specialities'} />
+                <NavItem onClick={() => scroll(getRef.specComp)}><Logo src={'./Images/specialities.svg'} alt={'specialities'} />
                     <NavText>Speciality</NavText></NavItem>
-                <NavItem ><Logo src={'./Images/menu.svg'} alt={'menu'} />
+                <NavItem onClick={() => scroll(getRef.menuComp)}><Logo src={'./Images/menu.svg'} alt={'menu'} />
                     <NavText>Menu</NavText></NavItem>
                 <NavItem ><Logo src={'./Images/career.svg'} alt={'career'} />
                     <NavText>Career</NavText></NavItem>
