@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/taco-bar/precache-manifest.c6fc3485ec9c7d304541e99024cdd08c.js"
+  "/taco-bar/precache-manifest.dde34bddc7e386c99568c30eecc013cb.js"
 );
 
 workbox.clientsClaim();
