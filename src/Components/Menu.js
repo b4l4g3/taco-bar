@@ -38,6 +38,10 @@ const Block = styled.div`
   @media (max-width: 390px) {
     margin: 0.5em;
   }
+
+  @media (min-width: 1400px) {
+    padding: 3em;
+  }
 `
 
 const Container = styled.div`
@@ -97,28 +101,28 @@ class Menu extends Component {
         bgImage = {
           background: "#6DB3F2 url('./Images/tacos2.jpg')",
           backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundSize: "cover"
         };
         break;
         case 'sides':
         bgImage = {
           background: "#6DB3F2 url('./Images/sides2.jpg')",
           backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundSize: "cover"
         };
         break;
         case 'drinks':
         bgImage = {
           background: "#6DB3F2 url('./Images/drinks2.jpg')",
           backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundSize: "cover"
         };
         break;
         case 'desserts':
         bgImage = {
           background: "#6DB3F2 url('./Images/desserts2.jpg')",
           backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundSize: "cover"
         };
         break;
         default:

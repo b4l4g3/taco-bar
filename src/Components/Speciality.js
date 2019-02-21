@@ -9,13 +9,27 @@ const Wrapper = styled.div`
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const Container = styled.div`
+  background-color: #ffffffdb;
+  height: 85%;
+  width: 80%;
+`
+
+const Title = styled.h1`
+
 `
 
 class Speciality extends Component {
   render() {
     return (
       <Wrapper ref={this.props.innerRef}>
-        <p>asd</p>
+        <Container></Container>
       </Wrapper>
     )
   }

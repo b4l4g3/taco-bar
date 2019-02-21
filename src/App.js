@@ -36,8 +36,8 @@ class App extends Component {
       <Wrapper>
         <GlobalStyle />
         <Home  getRef={this.state} />
-        <Menu ref={this.state.menuComp} />
         <Speciality ref={this.state.specComp} />
+        <Menu ref={this.state.menuComp} />
       </Wrapper>
     );
   }
