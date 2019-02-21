@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  scroll-snap-align: center;
-  background-image: url('./Images/speciality.jpg');
-  background-repeat: no-repeat;
+  background-image: url('./Images/specBG2.jpg');
+  background-repeat: repeat;
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -22,14 +20,18 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
-
+  text-align: center;
+  font: normal 600 2.3em Merriweather;
+  color: black;
 `
 
 class Speciality extends Component {
   render() {
     return (
       <Wrapper ref={this.props.innerRef}>
-        <Container></Container>
+        <Container>
+          <Title>This Month's Special</Title>
+        </Container>
       </Wrapper>
     )
   }

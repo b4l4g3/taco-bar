@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Home from './Components/Home';
 import Speciality from './Components/Speciality';
 import Menu from './Components/Menu';
+import Hamburger from './Components/Hamburger';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Oleo+Script');
@@ -35,6 +36,7 @@ class App extends Component {
     return (
       <Wrapper>
         <GlobalStyle />
+        <Hamburger />
         <Home  getRef={this.state} />
         <Speciality ref={this.state.specComp} />
         <Menu ref={this.state.menuComp} />
