@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   text-align: center;
   margin: 10px;
-  color: #535252;
+  color: #4f0808
   font: normal 600 2em Merriweather;
 `
 
@@ -34,6 +34,7 @@ const Block = styled.div`
   color: #f6f6f6;
   padding: 2em;
   margin: 1em;
+  border: 0.2em solid black;
 
   @media (max-width: 390px) {
     margin: 0.5em;
@@ -45,7 +46,7 @@ const Block = styled.div`
 `
 
 const Container = styled.div`
-  background-color: #434343c7;
+  background-color: #4f0808c7;;
   border-radius: 4px;
 `
 
@@ -94,7 +95,6 @@ class Menu extends Component {
         </Item>
         items.push(comp);
       })
-      console.dir(value);
       let bgImage;
       switch (value) {
         case 'tacos': 

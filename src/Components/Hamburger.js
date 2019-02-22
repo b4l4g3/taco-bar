@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import './Hamburger.css';
+import { scroll } from '../helper.js'
 
 const Wrapper = styled.div`
     z-index: 50;
+`
+
+const NavItem = styled.a`
+
 `
 
 export class Hamburger extends Component {
@@ -17,11 +22,11 @@ export class Hamburger extends Component {
                         <span></span>
                         <span></span>
                         <ul id="menu">
-                            <a ><li>Home</li></a>
-                            <a ><li>Speciality</li></a>
-                            <a ><li>Menu</li></a>
-                            <a ><li>Career</li></a>
-                            <a ><li>Location</li></a>
+                            <NavItem onClick={() => scroll(this.props.getRef.homeComp)} ><li>Home</li></NavItem>
+                            <NavItem onClick={() => scroll(this.props.getRef.specComp)} ><li>Menu</li></NavItem>
+                            <NavItem onClick={() => scroll(this.props.getRef.menuComp)} ><li>Speciality</li></NavItem>
+                            <NavItem ><li>Career</li></NavItem>
+                            <NavItem ><li>Location</li></NavItem>
                         </ul>
                     </div>
                 </nav>

@@ -34,12 +34,11 @@ const NavText = styled.p`
 
 class Nav extends Component {
     render() {
-        const getRef = this.props.getRef;
         return (
             <Wrapper>
-                <NavItem onClick={() => scroll(getRef.specComp)}><Logo src={'./Images/specialities.svg'} alt={'specialities'} />
+                <NavItem onClick={() => scroll(this.props.getRef.specComp)}><Logo src={'./Images/specialities.svg'} alt={'specialities'} />
                     <NavText>Speciality</NavText></NavItem>
-                <NavItem onClick={() => scroll(getRef.menuComp)}><Logo src={'./Images/menu.svg'} alt={'menu'} />
+                <NavItem onClick={() => scroll(this.props.getRef.menuComp)}><Logo src={'./Images/menu.svg'} alt={'menu'} />
                     <NavText>Menu</NavText></NavItem>
                 <NavItem ><Logo src={'./Images/career.svg'} alt={'career'} />
                     <NavText>Career</NavText></NavItem>

@@ -23,6 +23,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      homeComp: React.createRef(),
       menuComp: React.createRef(),
       specComp: React.createRef()
     }
@@ -36,8 +37,8 @@ class App extends Component {
     return (
       <Wrapper>
         <GlobalStyle />
-        <Hamburger />
-        <Home  getRef={this.state} />
+        <Hamburger getRef={this.state} />
+        <Home ref={this.state.homeComp} getRef={this.state} />
         <Speciality ref={this.state.specComp} />
         <Menu ref={this.state.menuComp} />
       </Wrapper>
