@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     font: normal 600 1em monospace;
+    z-index: 10;
 `
 
 const NavItem = styled.a`

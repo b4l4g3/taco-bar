@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 const Wrapper = styled.div`
   scroll-snap-align: center;
-  background-image: url('./Images/bg-img.jpg');
+  background-image: url('./Images/homeBG.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -29,6 +29,18 @@ const Wrapper = styled.div`
   }
 `
 
+const Layer = styled.div`
+  background-image: url('./Images/layer2.png');
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  bottom: 0;
+`
+
+
 const Logo = styled.img`
   grid-area: Logo;
   height: 6.25em;
@@ -51,12 +63,14 @@ const MiddleTitle = styled.h2`
   font: italic 600 2em Merriweather;
   grid-area: MiddleTitle;
   border-bottom: 2px solid white;
+  z-index: 10;
 `
 
 const LowerTitle = styled.h3`
   font: italic 400 1.5em Merriweather;
   grid-area: LowerTitle;
   margin: 0;
+  z-index: 10;
 
   @media (max-width: 390px) {
     width: 15em;
@@ -79,6 +93,7 @@ const Button = styled.a`
   color: #480400;
   text-align: center;
   padding: 0.7em;
+  z-index: 10;
 
   &:hover {
     background-color: #ffffffba;
@@ -100,6 +115,7 @@ class Home extends Component {
         <LowerTitle>Enjoy the most delicious flavors of Mexico!</LowerTitle>
         <Button target={'_blank'} href={'https://www.ubereats.com/restaurant/signup/dante-taco-bar/'}>Order</Button>
         <Nav getRef={getRef} />
+        <Layer />
       </Wrapper>
     )
   }

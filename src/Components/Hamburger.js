@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import './Hamburger.css';
 
 const Wrapper = styled.div`
-    
+    z-index: 50;
 `
 
 export class Hamburger extends Component {

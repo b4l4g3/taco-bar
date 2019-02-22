@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  background-image: url('./Images/specBG2.jpg');
+  background-image: url('./Images/specBG3.jpg');
   background-repeat: repeat;
   background-position: center center;
   background-size: cover;
@@ -14,9 +14,13 @@ const Wrapper = styled.div`
 `
 
 const Container = styled.div`
-  background-color: #ffffffdb;
+  background-color: #ffffffbf;
   height: 85%;
   width: 80%;
+
+  @media (max-width: 400px) {
+    width: 95%;
+  }
 `
 
 const Title = styled.h1`
