@@ -1,11 +1,13 @@
 {
-  "main.js": "/taco-bar/static/js/main.6bc4c2cb.chunk.js",
-  "main.js.map": "/taco-bar/static/js/main.6bc4c2cb.chunk.js.map",
-  "static/js/1.a6a960a8.chunk.js": "/taco-bar/static/js/1.a6a960a8.chunk.js",
-  "static/js/1.a6a960a8.chunk.js.map": "/taco-bar/static/js/1.a6a960a8.chunk.js.map",
+  "main.css": "/taco-bar/static/css/main.d5524e4f.chunk.css",
+  "main.js": "/taco-bar/static/js/main.6a439187.chunk.js",
+  "main.js.map": "/taco-bar/static/js/main.6a439187.chunk.js.map",
+  "static/js/1.a41552e7.chunk.js": "/taco-bar/static/js/1.a41552e7.chunk.js",
+  "static/js/1.a41552e7.chunk.js.map": "/taco-bar/static/js/1.a41552e7.chunk.js.map",
   "runtime~main.js": "/taco-bar/static/js/runtime~main.cf76bf07.js",
   "runtime~main.js.map": "/taco-bar/static/js/runtime~main.cf76bf07.js.map",
+  "static/css/main.d5524e4f.chunk.css.map": "/taco-bar/static/css/main.d5524e4f.chunk.css.map",
   "index.html": "/taco-bar/index.html",
-  "precache-manifest.12bc79e4f31252243eaef83431fc7d47.js": "/taco-bar/precache-manifest.12bc79e4f31252243eaef83431fc7d47.js",
+  "precache-manifest.2147c63f52c4e29952c74c5bf3a407e6.js": "/taco-bar/precache-manifest.2147c63f52c4e29952c74c5bf3a407e6.js",
   "service-worker.js": "/taco-bar/service-worker.js"
 }
