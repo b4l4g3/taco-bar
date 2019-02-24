@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 const Wrapper = styled.div`
   scroll-snap-align: center;
-  background-image: url('./Images/homeBG.jpg');
+  background-image: url('./Images/bg-img.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;

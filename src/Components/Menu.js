@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import menuData from './menuData'
+import menuData from './menuData';
 
 const Wrapper = styled.div`
   display: flex;
@@ -34,10 +34,10 @@ const Block = styled.div`
   color: #f6f6f6;
   padding: 2em;
   margin: 1em;
-  border: 0.2em solid black;
 
   @media (max-width: 390px) {
-    margin: 0.5em;
+    margin: 0.2em;
+    padding-top: 1.5em;
   }
 
   @media (min-width: 1400px) {
@@ -46,14 +46,15 @@ const Block = styled.div`
 `
 
 const Container = styled.div`
-  background-color: #4f0808c7;;
+  background-color: #4f0808c7;
   border-radius: 4px;
+  padding: 0px 10px 10px;
 `
 
 const Type = styled.p`
   text-align: center;
   margin: 0;
-  padding: 0.3em;
+  padding: 0;
   font: normal 600 1.8em 'Oleo Script';
 
   @media (max-width: 390px) {
@@ -67,6 +68,11 @@ const Item = styled.div`
   flex-direction: row;
   width: auto;
   justify-content: space-between;
+  border-bottom: 3.5px dotted white;
+
+  @media (max-width: 390px) {
+    border-bottom: 0;
+  }
 `
 
 const ItemName = styled.p`
