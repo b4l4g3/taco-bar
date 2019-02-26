@@ -23,8 +23,8 @@ export class Hamburger extends Component {
                         <span></span>
                         <ul id="menu">
                             <NavItem onClick={() => scroll(this.props.getRef.homeComp)} ><li>Home</li></NavItem>
-                            <NavItem onClick={() => scroll(this.props.getRef.specComp)} ><li>Menu</li></NavItem>
-                            <NavItem onClick={() => scroll(this.props.getRef.menuComp)} ><li>Speciality</li></NavItem>
+                            <NavItem onClick={() => scroll(this.props.getRef.specComp)} ><li>Speciality</li></NavItem>
+                            <NavItem onClick={() => scroll(this.props.getRef.menuComp)} ><li>Menu</li></NavItem>
                             <NavItem ><li>Career</li></NavItem>
                             <NavItem ><li>Location</li></NavItem>
                         </ul>
