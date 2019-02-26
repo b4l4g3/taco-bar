@@ -28,17 +28,17 @@ const Container = styled.div`
 
   @media (max-width: 400px) {
     width: 95%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 1fr 0.5fr 1.8fr 1fr;
-    grid-template-areas: "Title" "Icon" "Header" "Text" "Icon2";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
 `
 
 const Icon = styled.img`
   grid-area: Icon;
   height: 5em;
-  align-self: flex-end;
+  align-self: center;
   margin-right: 1.3em;
 `
 
@@ -59,6 +59,10 @@ const Header = styled.h2`
   text-align: center;
   margin: 0;
   padding-bottom: 1em;
+
+  @media (max-width: 400px) {
+    width: 70%;
+  }
 `
 
 const Text = styled.p`
@@ -70,6 +74,14 @@ const Text = styled.p`
   margin-top: 0;
   padding: 0 1em;
   padding-top: 1.3em;
+
+  @media (max-width: 400px) {
+    font-size: 1.6em;
+    padding-top: 0;
+    width: 80%;
+    align-self: center;
+    margin: 0;
+  }
 `
 
 const Pic = styled.img`
