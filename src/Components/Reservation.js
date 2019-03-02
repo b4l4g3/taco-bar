@@ -4,6 +4,8 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     background-image: url('./Images/reservation.jpg');
     background-repeat: repeat;
@@ -15,11 +17,11 @@ const Wrapper = styled.div`
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 90%;
     width: 50%;
-    margin: 2em auto;
     background-color: #ffffffcf;
     border-radius: 5px;
+    padding: 0.5em 7.5em;
 `
 
 const Title = styled.h1`
@@ -31,25 +33,34 @@ const Title = styled.h1`
 const Header = styled.h2`
     text-align: center;
     font: italic 600 1em Merriweather;
+    color: #9d1e00;
 `
 
 const Form = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    height: 43%;
 `
 
 const Label = styled.label`
-
+    width: 400px;
 `
 
 const Icon = styled.img`
     width: 2.6em;
+    margin-right: 1em;
 `
 
 const Input = styled.input`
-
+    border: none;
+    background-color: gray;
+    border-radius: 3px;
+    padding: 5px;
+    font: normal bold 1em Arial;
+    color: white;
 `
 
 export class Reservation extends Component {
@@ -60,6 +71,17 @@ export class Reservation extends Component {
     }
 
     render() {
+        const styles = {
+            date: {
+                width: '10.5em'
+            },
+            time: {
+                width: '8em'
+            },
+            persons: {
+                width: '4em'
+            }
+        }
         return (
             <Wrapper>
                 <Container>
@@ -69,15 +91,15 @@ export class Reservation extends Component {
                     <Form>
                         <Label>
                             <Icon src={'./Images/calendar.svg'} />
-                            <Input type="date" name="date" value={this.state.date} onChange={this.handleDate} />
+                            <Input style={styles.date} type="date" name="date" value={this.state.date} onChange={this.handleDate} />
                         </Label>
                         <Label>
                             <Icon src={'./Images/clock.svg'} />
-                            <Input type="time" name="time" value={this.state.time} onChange={this.handleTime} />
+                            <Input style={styles.time} type="time" name="time" value={this.state.time} onChange={this.handleTime} />
                         </Label>
                         <Label>
                             <Icon src={'./Images/group.svg'} />
-                            <Input type="number" name="persons" value={this.state.persons} onChange={this.handlePersons} />
+                            <Input style={styles.persons} type="number" name="persons" value={this.state.persons} onChange={this.handlePersons} />
                         </Label>
                     </Form>
                 </Container>
