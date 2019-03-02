@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+import Hamburger from './Components/Hamburger';
 import Home from './Components/Home';
 import Speciality from './Components/Speciality';
 import Menu from './Components/Menu';
-import Hamburger from './Components/Hamburger';
+import Reservation from './Components/Reservation';
+
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Oleo+Script');
@@ -41,6 +43,7 @@ class App extends Component {
         <Home ref={this.state.homeComp} getRef={this.state} />
         <Speciality ref={this.state.specComp} />
         <Menu ref={this.state.menuComp} />
+        <Reservation />
       </Wrapper>
     );
   }
