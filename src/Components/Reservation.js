@@ -40,13 +40,12 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-evenly;
-    height: 43%;
+    height: 50%;
 `
 
 const Label = styled.label`
-    width: 400px;
 `
 
 const Icon = styled.img`
@@ -61,6 +60,17 @@ const Input = styled.input`
     padding: 5px;
     font: normal bold 1em Arial;
     color: white;
+
+    &[type="submit"] {
+        background-color: #515151;
+        width: 10.5em;
+        margin-top: 10%;
+        height: 2.3em;
+
+        &:hover {
+            background-color: gray;
+          }
+      }
 `
 
 export class Reservation extends Component {
@@ -68,6 +78,27 @@ export class Reservation extends Component {
         super(props);
         this.state = {
         }
+
+        this.handleDate = this.handleDate.bind(this);
+        this.handlePersons = this.handlePersons.bind(this);
+        this.handleTime = this.handlePersons.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleDate(event) {
+    }
+
+    handlePersons(event) {
+        
+    }
+    
+    handleTime(event) {
+        
+    }
+
+    handleSubmit(event) {
+        alert(`${this.state.persons} tables are reserved on ${this.state.date} ${this.state.time}`);
+    event.preventDefault();
     }
 
     render() {
@@ -88,7 +119,7 @@ export class Reservation extends Component {
                     <Title>Reservation</Title>
                     <Header>
                         WE LOOK FORWARD TO SEEING YOU EITHER FOR THE FIRST TIME OR BACK TO ENJOY OUR GREAT FOOD AND AMAZING COCKTAILS!</Header>
-                    <Form>
+                    <Form onSubmit={this.handleSubmit}>
                         <Label>
                             <Icon src={'./Images/calendar.svg'} />
                             <Input style={styles.date} type="date" name="date" value={this.state.date} onChange={this.handleDate} />
@@ -99,8 +130,10 @@ export class Reservation extends Component {
                         </Label>
                         <Label>
                             <Icon src={'./Images/group.svg'} />
-                            <Input style={styles.persons} type="number" name="persons" value={this.state.persons} onChange={this.handlePersons} />
+                            <Input style={styles.persons} type="number" name="persons" min="1" max="20" value={this.state.persons} onChange={this.handlePersons} />
                         </Label>
+                            <Input style={styles.submit} type="submit" value="Submit" />
+                        
                     </Form>
                 </Container>
             </Wrapper>
