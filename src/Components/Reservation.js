@@ -32,8 +32,9 @@ const Title = styled.h1`
 
 const Header = styled.h2`
     text-align: center;
-    font: italic 600 1em Merriweather;
+    font: italic 600 1.2em Merriweather;
     color: #9d1e00;
+    margin-bottom: 2.2em;
 `
 
 const Form = styled.form`
@@ -77,27 +78,37 @@ export class Reservation extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            date: '',
+            time: '',
+            persons: ''
         }
 
         this.handleDate = this.handleDate.bind(this);
+        this.handleTime = this.handleTime.bind(this);
         this.handlePersons = this.handlePersons.bind(this);
-        this.handleTime = this.handlePersons.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleDate(event) {
+        this.setState({
+            date: event.target.value
+        })
+    }
+
+    handleTime(event) {
+         this.setState({
+            time: event.target.value
+        })
     }
 
     handlePersons(event) {
-        
-    }
-    
-    handleTime(event) {
-        
+        this.setState({
+            persons: event.target.value
+        })
     }
 
     handleSubmit(event) {
-        alert(`${this.state.persons} tables are reserved on ${this.state.date} ${this.state.time}`);
+    alert(`Tables are reserved for ${this.state.persons} people on ${this.state.date} ${this.state.time}`);
     event.preventDefault();
     }
 
@@ -114,11 +125,12 @@ export class Reservation extends Component {
             }
         }
         return (
-            <Wrapper>
+            <Wrapper  ref={this.props.innerRef}>
                 <Container>
                     <Title>Reservation</Title>
                     <Header>
-                        WE LOOK FORWARD TO SEEING YOU EITHER FOR THE FIRST TIME OR BACK TO ENJOY OUR GREAT FOOD AND AMAZING COCKTAILS!</Header>
+                    We look forward to seeing you either for the first time or back to enjoy our great food and amazing cocktails!
+                    </Header>
                     <Form onSubmit={this.handleSubmit}>
                         <Label>
                             <Icon src={'./Images/calendar.svg'} />
@@ -126,7 +138,7 @@ export class Reservation extends Component {
                         </Label>
                         <Label>
                             <Icon src={'./Images/clock.svg'} />
-                            <Input style={styles.time} type="time" name="time" value={this.state.time} onChange={this.handleTime} />
+                            <Input style={styles.time} type="time" value={this.state.time} onChange={this.handleTime} />
                         </Label>
                         <Label>
                             <Icon src={'./Images/group.svg'} />
@@ -141,4 +153,4 @@ export class Reservation extends Component {
     }
 }
 
-export default Reservation
+export default  React.forwardRef((props, ref) => <Reservation innerRef={ref} {...props}/>);

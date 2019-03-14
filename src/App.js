@@ -27,7 +27,8 @@ class App extends Component {
     this.state = {
       homeComp: React.createRef(),
       menuComp: React.createRef(),
-      specComp: React.createRef()
+      specComp: React.createRef(),
+      resComp: React.createRef()
     }
   }
 
@@ -43,7 +44,7 @@ class App extends Component {
         <Home ref={this.state.homeComp} getRef={this.state} />
         <Speciality ref={this.state.specComp} />
         <Menu ref={this.state.menuComp} />
-        <Reservation />
+        <Reservation ref={this.state.resComp} />
       </Wrapper>
     );
   }

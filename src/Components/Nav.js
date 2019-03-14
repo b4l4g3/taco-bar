@@ -40,7 +40,7 @@ class Nav extends Component {
                     <NavText>Speciality</NavText></NavItem>
                 <NavItem onClick={() => scroll(this.props.getRef.menuComp)}><Logo src={'./Images/menu.svg'} alt={'menu'} />
                     <NavText>Menu</NavText></NavItem>
-                <NavItem ><Logo src={'./Images/career.svg'} alt={'reservation'} />
+                <NavItem onClick={() => scroll(this.props.getRef.resComp)}><Logo src={'./Images/career.svg'} alt={'reservation'} />
                     <NavText>Reservation</NavText></NavItem>
                 <NavItem ><Logo src={'./Images/location.svg'} alt={'location'} />
                     <NavText>Location</NavText></NavItem>
