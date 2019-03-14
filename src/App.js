@@ -5,7 +5,7 @@ import Home from './Components/Home';
 import Speciality from './Components/Speciality';
 import Menu from './Components/Menu';
 import Reservation from './Components/Reservation';
-
+import Location from './Components/Location';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Oleo+Script');
@@ -28,7 +28,8 @@ class App extends Component {
       homeComp: React.createRef(),
       menuComp: React.createRef(),
       specComp: React.createRef(),
-      resComp: React.createRef()
+      resComp: React.createRef(),
+      locComp: React.createRef()
     }
   }
 
@@ -45,6 +46,7 @@ class App extends Component {
         <Speciality ref={this.state.specComp} />
         <Menu ref={this.state.menuComp} />
         <Reservation ref={this.state.resComp} />
+        <Location ref={this.state.locComp} />
       </Wrapper>
     );
   }
