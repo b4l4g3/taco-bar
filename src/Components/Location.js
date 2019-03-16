@@ -32,8 +32,6 @@ const Header = styled.p`
 `
 
 const Text = styled.p`
-  height: 40%;
-  width: 80%;
   grid-area: Text;
   text-align: center;
 `
@@ -41,8 +39,7 @@ const Text = styled.p`
 const Mapouter = styled.div`
   text-align: right;
   grid-area: Map;
-  height: 40%;
-  width: 80%;
+  padding: 1em;
 `
 
 const Canvas = styled.div`
