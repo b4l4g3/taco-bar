@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/taco-bar/static/js/runtime~main.cf76bf07.js"
   },
   {
-    "revision": "ee018ceae58d7623f51d",
-    "url": "/taco-bar/static/js/main.ee018cea.chunk.js"
+    "revision": "c9eaa3c8499960e762d7",
+    "url": "/taco-bar/static/js/main.c9eaa3c8.chunk.js"
   },
   {
     "revision": "1d6d281723123c47f34a",
     "url": "/taco-bar/static/js/1.1d6d2817.chunk.js"
   },
   {
-    "revision": "ee018ceae58d7623f51d",
+    "revision": "c9eaa3c8499960e762d7",
     "url": "/taco-bar/static/css/main.50ae970f.chunk.css"
   },
   {
-    "revision": "c70b199333db95201edf991eea1c098c",
+    "revision": "feb453742d215242fcaa7e99bd422dec",
     "url": "/taco-bar/index.html"
   }
 ];
