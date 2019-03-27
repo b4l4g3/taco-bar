@@ -22,6 +22,14 @@ const Container = styled.div`
     background-color: #ffffffcf;
     border-radius: 5px;
     padding: 0.5em 7.5em;
+
+    @media (max-width: 400px) {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
 `
 
 const Title = styled.h1`
@@ -44,6 +52,14 @@ const Form = styled.form`
     align-items: center;
     justify-content: space-evenly;
     height: 50%;
+
+    @media (max-width: 400px) {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
 `
 
 const Label = styled.label`

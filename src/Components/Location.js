@@ -22,6 +22,15 @@ const Container = styled.div`
   grid-template-areas: "Header Header" "Text Map";
   background-color: #c5c2bfdb;
   color: black;
+
+  @media (max-width: 400px) {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+  }
 `
 
 const Header = styled.p`
