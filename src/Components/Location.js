@@ -28,12 +28,28 @@ const Header = styled.p`
   grid-area: Header;
   text-align: center;
   margin: 0.75em 0 0 0;
-  font: 600 normal 2em Merriweather
+  font: 600 normal 2em Merriweather;
+`
+
+const Texts = styled.div`
+  padding: 1em;
 `
 
 const Text = styled.p`
   grid-area: Text;
   text-align: center;
+  padding: 1em;
+  font: normal 600 1em sans-serif;
+  line-height: 1.3em;
+  border: 1px solid black;
+`
+
+const LocText = styled.p`
+  grid-area: Text;
+  text-align: center;
+  font: italic 800 1.3em monospace;
+  padding-bottom: 1em;
+  color: #691c1c;
 `
 
 const Mapouter = styled.div`
@@ -60,7 +76,10 @@ export class Location extends Component {
       <Wrapper ref={this.props.innerRef} >
         <Container>
           <Header>Location</Header>
-          <Text>Asd</Text>
+          <Texts>
+          <LocText>35 Bridge St, Bradford, UK</LocText>
+          <Text>Accessible parking is available for guests and is easily accessible in parking lot NCP Bradford Hall Ings, next to the Badford Hotel, 3 mins away from our restaurant.</Text>
+          </Texts>
           <Mapouter><Canvas><Frame title="map" id="gmap_canvas" src="https://maps.google.com/maps?q=35%20Bridge%20St%2C%20Bradford%2C%20UK&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"></Frame></Canvas></Mapouter>
         </Container>
       </Wrapper>
